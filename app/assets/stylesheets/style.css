@@ -1,0 +1,141 @@
+/* Nav Bar */
+
+.nav-links {
+  padding-right: 30px;
+  margin-top: 15px;
+}
+
+.nav-link {
+  padding: 10px;
+}
+
+
+.hero-bg-2 {
+  background: url('/images/dapper_header_3.jpg') no-repeat scroll left top / cover transparent;
+  height: 550px;
+
+}
+
+.headline {
+  padding: 100px 80px 0px;
+  margin: 0px auto;
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+.home2headline {
+  color: #FFF;
+  font-size: 46px;
+  line-height: 54px;
+}
+
+.subheaderhome2 {
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  max-width: 510px;
+}
+
+.home2button {
+  margin: 35px 0px 0px 80px;
+  width: 170px;
+  font-size: 15px;
+  background: none repeat scroll 0% 0% #00ADEE;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 3px;
+  color: #FFF;
+  line-height: 50px;
+  cursor: pointer;
+  padding: 0px 30px;
+  display: inline-block;
+  transition: all 0.5s ease 0s;
+}
+
+.home2buttonb{
+  width: 108px;
+  margin: 0px 20px;
+  text-align: center
+  font-size: 15px;
+  border: 1px solid #FFF;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 3px;
+  color: #FFF;
+  line-height: 48px;
+  cursor: pointer;
+  padding: 0px 30px;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.5s ease 0s;
+}
+
+.home2buttonc {
+  margin: 35px 0px 0px 80px;
+  width: 190px;
+  font-size: 15px;
+  background: none repeat scroll 0% 0% #00ADEE;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 3px;
+  color: #FFF;
+  line-height: 50px;
+  cursor: pointer;
+  padding: 0px 30px;
+  display: inline-block;
+  transition: all 0.5s ease 0s;
+}
+
+.home2button .pic {
+  margin: 0% 33%; 
+  width: 190px;
+}
+
+.home2button:hover{
+  background: none repeat scroll 0% 0% #6184DB;
+}
+
+.home2buttonb:hover{
+  background: none repeat scroll 0% 0% #FFF;
+  opacity: 70%;
+}
+
+.publications{
+  background: none repeat scroll 0% 0% #f5f5f5;
+  min-height: 110px;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.publications span {
+  text-transform: uppercase;
+  color: #666;
+  font-weight: bold;
+  margin: 0px 30px 20px 0px;
+  position: relative;
+  top: 2px;
+}
+
+#lifehacker {
+  height: 25px;
+}
+
+#techcrunch {
+  height: 25px;
+}
+
+.imagehome2a {
+  background: url('/images/one_background.jpg') repeat scroll center top / cover transparent;
+  padding-top: 20px;
+  height: 380px;
+}
+
+.pics {
+  padding-left: 0px;
+  padding-right: 0px;
+
+}
+.text_container {
+  max-width: 423px;
+  margin: auto;
+  text-align: center;
+}
