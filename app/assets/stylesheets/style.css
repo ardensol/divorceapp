@@ -139,3 +139,164 @@
   margin: auto;
   text-align: center;
 }
+
+/* Divorce Quote Page */
+
+.grey {
+  background-color: #F2F2F2;
+  padding: 30px;
+}
+
+.quote-header {
+  text-align: center;
+  padding: 20px;
+}
+
+.quote-form {
+  background-color: #FFF;
+  padding: 20px;
+  width: 500px;
+  border: 3px #e4e4e4 solid;
+}
+
+.quote-button {
+  width: 170px;
+  font-size: 15px;
+  background: none repeat scroll 0% 0% #00ADEE;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 3px;
+  color: #FFF;
+  line-height: 50px;
+  cursor: pointer;
+  padding: 0px 30px;
+  display: inline-block;
+  transition: all 0.5s ease 0s;
+  }
+
+.quote-button:hover {
+  background: none repeat scroll 0% 0% #6184DB;
+  }
+
+.quote_label {
+  color: #848589;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.quote_input {
+  border: 1px #e4e4e4 solid;
+  display: block;
+  color: #17181B;
+  height: 53px;
+  font-weight: 400;
+  font-size: 19px;
+  width: 100%;
+  padding: 7px;
+}
+
+.quote_textarea {
+  border: 1px #e4e4e4 solid;
+  display: block;
+  color: #17181B;
+  height: 100px;
+  font-weight: 400;
+  font-size: 19px;
+  width: 100%;
+  padding: 7px;
+}
+
+@media (max-width: 482px) {
+  .quote-form {
+    width: 350px;
+  }
+}
+
+/* Profile Page */
+
+
+
+.profile-header {
+  min-height: 1rem;
+  line-height: 1.33;
+  border: none;
+  padding: 0em;
+  font-weight: bold;
+  padding-bottom: 3.5em;
+  background: #EEEFEF;
+}
+
+.profile-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  background: #f8f8f8;
+  padding-bottom: 100px;  
+}
+
+.ui.responsive.grid {
+  padding: 0% 8%;
+  margin-left: 0% !important;
+  margin-right: 0% !important;
+  min-width: 320px;
+  display: block;
+  text-align: left;
+  font-size: 0em;
+  margin: 0% -1.5%;
+  box-sizing: border-box;
+}
+
+.tab-menu{
+  position: relative;
+  top: -24px;
+  display: inline-block;
+  border-color: #9DA6AB;
+  width: 100%;
+  text-align: center;
+  background-color: #FFFFFF;
+  color: #9DA6AB;
+  border-radius: 0.1875rem;
+}
+
+.tab{
+  width: 33%;
+  font-style: italic;
+  color: #9DA6AB;
+  font-size: 1rem;
+  min-height: 2.5em;
+  position: relative;
+  display: inline-block;
+  padding: 0.75em 0.95em;
+  border-top: 0em solid rgba(0, 0, 0, 0);
+  border: #9DA6AB;
+}
+
+.circular-image {
+  border-radius: 500em;
+  width: 135px;
+  height: 135px;
+}
+
+.avatar {
+  float: left;
+  margin-right: 1em;
+  font-size: 1.875em;
+  font-weight: bold;
+  width: 135px;
+  height: 135px;
+  border: 4px solid white;
+  border-radius: 500em;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2); 
+}
+
+.meta {
+  color: #9da6ab;
+  margin: 0.6em 0 0.8em 10em;
+}
+.joined{
+  margin-right: 0.9em;
+}
+.bio {
+  margin-left: 11em;
+}

@@ -1,0 +1,44 @@
+<div class="profile-header">
+	<div class="container-fluid">
+		<br />
+		<div class ="row">
+			<div class = "col-md-9">
+				<div class ="avatar">
+					<%= image_tag @profile.avatar.url(:medium), :class => "circular-image" %>
+				</div>
+				<div class = "profile-header"> 
+					<h3><%= @profile.name %></h3>
+				</div>
+				<p class="meta">
+					<small class="comment-user-height">Law School: <%= @profile.law_school%> | </small>
+					<small class="comment-user-height">Bar Memberships: <%= @profile.state %> </small>
+				</p>	
+				<p class="bio"><%= @profile.blurb %> </p>
+			</div>		
+		</div>
+	</div>	
+</div>
+
+<div class= "profile-content">
+	<article id ="profile-tabs">
+		<div class="ui responsive grid">
+			<div class="col-md-12">
+				<div class="tab-menu">
+					<div class="tab">About</div>
+					<div class="tab">Posts</div>
+				</div>	
+			</div>	
+		</div>
+	</article>
+
+	<div class = "container-fluid">
+		<div class="col-md-9">
+			<div class = "section">
+				<h3>About</h3>
+
+					<p><%= @profile.description %> </p>
+				
+			</div>
+		</div>
+	</div>	
+</div>
