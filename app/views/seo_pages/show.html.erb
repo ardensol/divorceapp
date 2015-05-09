@@ -1,0 +1,37 @@
+  <div class="<%= @seo_page.image_tag %>">
+    <div class="headline">
+      <h1 class="home2headline w-hidden-tiny">We ranked the best Divorce Lawyers<br/>in <%= @seo_page.city %>, <%= @seo_page.state %>.</h1>
+      <div class="subheaderhome2 ">Find the Best Lawyers in <%= @seo_page.city %>, <%= @seo_page.state %>.</div>
+    </div>
+  </div>
+  <hr class="comments-rule">
+
+  <% @lawyers.each do |l| %>
+  <div class="profile-best"> 
+    <div class="profile-body">
+      <div class= "profile-user-name"><%= link_to( l.name, profile_path(l.id)) %>
+      </div>
+    
+        <div class="profile-user-info">
+        <small class="profile-user-height"><%= l.law_school %> | </small>
+        <small class="profile-user-height"><%= l.city %> | </small>
+        <small class="profile-user-height"><%= l.state %> </small>
+
+        
+      
+      </div>
+      <div class= "profile-image-container">
+        <a class="user-image-link-post"><%=link_to( image_tag(l.avatar.url(:medium), :class => "circular-image-mini"), profile_path(l.id)) %> </a>
+
+      </div>
+      <div><%= l.blurb %></div>
+    </div>
+
+    <hr class ="comments-rule child">
+  
+  </div>  
+
+
+
+  <% end %>
+
