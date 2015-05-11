@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
 
+  devise_for :users
   resources :seo_pages
 
   root to: 'pages#home'

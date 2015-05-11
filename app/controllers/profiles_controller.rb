@@ -1,6 +1,7 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
+  before_action :verify_admin, only: [:new, :edit, :update, :destroy]
   # GET /profiles
   # GET /profiles.json
   def index
@@ -58,6 +59,12 @@ class ProfilesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to profiles_url, notice: 'Profile was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def verify_admin
+    unless current_user.admin? == true
+      redirect_to root_path
     end
   end
 

@@ -1,6 +1,7 @@
 class SeoPagesController < ApplicationController
   before_action :set_seo_page, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
+  before_action :verify_admin, only: [:new, :edit, :update, :destroy]
   # GET /seo_pages
   # GET /seo_pages.json
   def index
@@ -59,6 +60,12 @@ class SeoPagesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to seo_pages_url, notice: 'Seo page was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def verify_admin
+    unless current_user.admin? == true
+      redirect_to root_path
     end
   end
 
