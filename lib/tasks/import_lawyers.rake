@@ -14,7 +14,8 @@ namespace :import do
                             state: row[2].strip,
                             phone_number: row[7].rstrip.lstrip,
                             description: des,
-                            blurb: des
+                            blurb: des,
+                            scrape_url: row[3].strip
                             })
 
             

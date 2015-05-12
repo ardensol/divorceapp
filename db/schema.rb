@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150511064529) do
+ActiveRecord::Schema.define(version: 20150512013626) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20150511064529) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.string   "city"
+    t.string   "scrape_url"
   end
 
   create_table "quotes", force: :cascade do |t|
