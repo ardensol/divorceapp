@@ -10,7 +10,7 @@ namespace :export do
         
         agent = Mechanize.new
         
-        mech_page = agent.get("http://www.aaml.org/members/california?page=3")
+        mech_page = agent.get("http://www.aaml.org/members/texas")
 
         i = 0
 
