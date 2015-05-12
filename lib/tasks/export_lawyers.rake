@@ -15,7 +15,7 @@ namespace :export do
         i = 0
 
         CSV.open("#{Rails.root}/public/lawyers.csv", "w+") do |csv|
-            csv << ["name", "city", "state", "url", "blurb", "legal_orgs", "street_address", "phone", "website"]
+            csv << ["name", "city", "state", "url", "blurb", "legal_orgs", "street_address", "phone", "zip code"]
             page = mech_page.parser
             page.css('tr').each do |scrape|
                 name = scrape.css('.views-field-field-profile-fname-value-1').text
@@ -33,15 +33,17 @@ namespace :export do
                 legal_orgs = profile_page_parsed.css('.details')[1].text
                 presentations = profile_page_parsed.css('.details')[2].text
 
-                street_address = profile_page_parsed.css('.street-address').text
+                street_address = profile_page_parsed.css('.extended-address').text
 
-                phone = profile_page_parsed.css('.tel')[0].text
+                zip_code = profile_page_parsed.css('.postal-code').text
+
+                phone = profile_page_parsed.css('.tel .value')[0].text
 
 
                 i += 1
 
 
-                csv << [name, city, state, url, blurb, legal_orgs, street_address, phone]
+                csv << [name, city, state, url, blurb, legal_orgs, street_address, phone, zip_code]
             end
         end
     end
