@@ -32,6 +32,7 @@ gem 'devise'
 
 gem 'friendly_id'
 gem 'mechanize'
+gem 'sitemap_generator'
 
 
 # Use ActiveModel has_secure_password
