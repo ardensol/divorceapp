@@ -11,7 +11,7 @@ class SeoPagesController < ApplicationController
   # GET /seo_pages/1
   # GET /seo_pages/1.json
   def show
-    @lawyers = Profile.where(city: params[:city])
+    @lawyers = Profile.where(city: params[:city].capitalize).limit(10)
   end
 
   # GET /seo_pages/new
