@@ -18,6 +18,42 @@ a:hover {
   padding: 10px;
 }
 
+/* Footer */
+.footer-link {
+  margin-right: 9px;
+  margin-left: 9px;
+  color: #008cff;
+  font-family: "brandon-grotesque";
+  font-size: 14px;
+  text-decoration: none;
+}
+.footer-nav-bar {
+  text-align: right;
+}
+.footer-text {
+  font-size: 14px;
+}
+
+.footer-nav-bar {
+    text-align: center;
+  }
+.left-footer-col {
+  margin-bottom: 13px;
+  text-align: center;
+}
+.section {
+  padding-top: 15px;
+  padding-bottom: 44px;
+}
+
+li {
+  font-family: "brandon-grotesque";
+  font-size: 18px;
+  font-weight: 400;
+  color: black;
+  padding-left: 20px;
+  list-style-type: none;
+}
 
 /* Home Page */
 
