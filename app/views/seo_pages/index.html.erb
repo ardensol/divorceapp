@@ -22,7 +22,7 @@
         <td><%= seo_page.og_description %></td>
         <td><%= seo_page.slug %></td>
         <td><%= seo_page.image_tag %></td>
-        <td><%= link_to 'Show', seo_page %></td>
+        <td><%= link_to 'Show', seo_show_path(seo_page.state, seo_page.city, seo_page.slug) %></td>
         <td><%= link_to 'Edit', edit_seo_page_path(seo_page) %></td>
         <td><%= link_to 'Destroy', seo_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
