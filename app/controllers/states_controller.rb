@@ -12,6 +12,7 @@ class StatesController < ApplicationController
   # GET /seo_pages/1.json
   def show
     @cities = SeoPage.where(state: params[:name].capitalize)
+    @title = "Divorce Statistics for the State of #{@state.name}"
   end
 
   # GET /seo_pages/new
