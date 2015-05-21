@@ -11,6 +11,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/1
   # GET /profiles/1.json
   def show
+    @title = "Divorce Lawyer - #{@profile.name} from #{@profile.city}, #{@profile.state}"
   end
 
   # GET /profiles/new
