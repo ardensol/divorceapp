@@ -1,0 +1,12 @@
+<div class = "container-fluid">
+  <h1><%= @state.name %></h1>
+
+
+  <p> <%= @state.divorce_law_description.html_safe %><p>
+
+  <% if @cities != [] %>
+    <% @cities.each do |c| %>
+      <%= link_to "#{c.city}, #{c.state}", seo_show_path(c.state, c.city, c.slug) %>
+    <% end %>
+  <% end %>
+</div>

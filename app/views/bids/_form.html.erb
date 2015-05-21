@@ -1,0 +1,22 @@
+<div class="row">
+	<div class="col-sm-8 col-sm-offset-3">
+		<div class="quote-form">
+			<h4> You're bidding on <%= @quote.name %>'s Request in <%= @quote.location %> </h4>
+			<%= form_for [@quote, @bid] do |f| %>
+					<div class="field">
+					    <h3 class="quote_label">Enter Your Bid Title</h3>
+					    <%= f.text_field :name, class: "quote_input" %>
+			 		 </div>
+			 		 <div class="field">
+					    <h3 class="quote_label">Enter Your Bid Amount</h3>
+					    <%= f.text_field :amount, class: "quote_input" %>
+			 		 </div>
+			 		 <div class="field">
+					    <h3 class="quote_label">Describe The Service You Will Offer</h3>
+					    <%= f.text_area :description, class: "quote_text_area", rows: 5 %>
+			 		 </div>
+				<%= f.submit "Submit Bid", class: "home2button" %>
+			<% end %>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,4 @@
+<%= form_for [@commentable, @comment] do |f| %>
+	<%= f.text_area :content, rows: 3, :class => "commenttextarea" %>
+	<%= f.submit "Submit", class: "button hero-button", style: "margin-top: 20px;" %>
+<% end %>

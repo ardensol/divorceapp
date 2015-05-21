@@ -6,8 +6,12 @@
       </a>
     </div>
     <div class="navbar-right nav-links">
-	      <a class="nav-link" href="#">Best</a>
-	      <a class="nav-link" href="#">Rankings</a>
-	  </div>
+      <% if signed_in? %>
+        <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, class: "nav-link"%>
+      <% else %>
+        <a class="nav-link" href="/users/sign_up">Sign Up</a>
+        <%= link_to "Lawyer Registration", new_user_registration_path(vendor: true), class: "nav-link" %>
+      <% end %>
+    </div>
   </div>
 </nav>

@@ -2,9 +2,10 @@
 	<div class="col-sm-8 col-sm-offset-3">
 		<div class="quote-form">
 			<%= form_for @quote do |f| %>
-				<h3 class="quote_label">Enter Your Email</h3>
-				<%= f.text_field(:email, class: "quote_input") %><br/>
-
+				<% unless signed_in? %>
+					<h3 class="quote_label">Enter Your Email</h3>
+					<%= f.text_field(:email, class: "quote_input") %><br/>
+				<% end %>
 				<h3 class="quote_label">Name</h3>
 				<%= f.text_field(:name, class: "quote_input") %><br/>
 
@@ -12,10 +13,10 @@
 				<%= f.select :field, options_for_select([["Divorce", "Divorce"], ["Pre-Nup", "Pre-Nup"], ["Legal Separation", "Legal Separation"], ["Annulment", "Annulment"]]) %><br/>
 
 				<h3 class="quote_label">What Are Your Legal Needs?</h3>
-				<%= f.text_area(:email, class: "quote_textarea") %><br/>
+				<%= f.text_area(:description, class: "quote_textarea") %><br/>
 
 				<h3 class="quote_label">Location</h3>
-				<%= f.text_field(:location, class: "quote_input") %><br/><br/>
+				<%= f.text_field(:location, class: "quote_input", placeholder: "Please Enter Your Zip Code") %><br/><br/>
 
 
 				<%= f.submit "Get A Quote", class: "quote-button" %>

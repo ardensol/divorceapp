@@ -1,0 +1,27 @@
+<hr class="comments-rule">
+<% @comments.each do |comment| %>
+	<div class="comment">	
+		<div class="comment-body">
+			<div class= "comment-user-name"><%= comment.user.email %>
+			</div>
+			
+			<div class="comment-user-info">
+				<small class="comment-user-height">Blah</small>
+
+
+				
+			
+			</div>
+			<div class= "comment-image-container">
+				
+				<p class="user-image-link-post">Image Link TBU </p>
+				
+			</div>
+			<div><%= comment.content %></div>
+		</div>
+
+		<hr class ="comments-rule child">
+	
+	</div>	
+<% end %>
+

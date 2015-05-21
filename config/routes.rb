@@ -1,16 +1,33 @@
 Rails.application.routes.draw do
   
-
-  devise_for :users
-  resources :seo_pages
-
-  root to: 'pages#home'
-  resources :quotes
+  devise_for :users, controllers: { registrations: 'registrations'}
+  
+  
+  resources :quotes do
+    resources :bids
+  end
   resources :profiles
 
+  resources :bids do
+    resources :comments
+  end
+
+  match "quote", to: "quotes#quote", via: 'get'
+
+  get "comments/index"
+
+  get "comments/new"
+
+  #Search Engine Optimization
+  resources :states
+  resources :seo_pages
+
+  get 'divorce/:name', to: 'states#show', as: 'state_show' 
 
   get ':state/:city/:id', to: 'seo_pages#show', as: 'seo_show'
 
+  root to: 'pages#home'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

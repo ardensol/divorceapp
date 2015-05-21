@@ -3,7 +3,6 @@ require 'nokogiri'
 require 'open-uri'
 require 'csv'
 require 'mechanize'
-include Magick
 
 namespace :export do
     desc "Will out put CSV's for Subscribers"

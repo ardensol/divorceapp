@@ -1,0 +1,39 @@
+<hr class="comments-rule">
+<% @comments.each do |comment| %>
+	<div class="comment">	
+		<div class="comment-body">
+			<div class= "comment-user-name"><%= link_to( comment.user.fullname, profile_path(comment.user.profile)) %>
+				<% if comment.user.profile.vendor %>
+				<span><%= image_tag("maker_badge.png", size: "15x15", :data => {:toggle=>"tooltip", :title=>"Maker"}) %></span>
+				<% else %>
+				<% end %>
+				<% if comment.user.profile.moderator %>
+				<span><%= image_tag("inner_circle_badge.png", size: "15x15", :data => {:toggle=>"tooltip", :title=>"Inner Circle Member:</br>Our most active members are involved in design, production and quality control"}) %></span>
+				<% else %>
+				<% end %>
+			</div>
+
+			
+
+
+			
+			<div class="comment-user-info">
+				<small class="comment-user-height"><%= comment.user.profile.height %> | </small>
+				<small class="comment-user-height"><%= comment.user.profile.weight %> | </small>
+				<small class="comment-user-height"><%= comment.user.profile.byline %> </small>
+
+				
+			
+			</div>
+			<div class= "comment-image-container">
+				<a class="user-image-link-post"><%=link_to( image_tag(comment.user.avatar.url(:medium), :class => "circular-image-mini"), profile_path(comment.user.profile)) %> </a>
+
+			</div>
+			<div><%= comment.content %></div>
+		</div>
+
+		<hr class ="comments-rule child">
+	
+	</div>	
+<% end %>
+

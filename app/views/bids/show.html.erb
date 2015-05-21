@@ -1,0 +1,55 @@
+<div class="quote-header-show">
+	<div class="container-fluid pad-top-bot">
+		<div class="clearfix left">
+			<a class="pic-padding left" style="width: 60px;">
+				<img src="https://assembly.firesize.com/120x120/g_center/https://d1015h9unskp4y.cloudfront.net/attachments/bda9dba4-57d1-417e-a592-6fe5efbdd9d6/InstajobsLogo-01.jpg" width="60" height="60">
+			</a>
+			<div class="overflow-hidden">
+				<h2 class="marg-bot-top-0"><%= @quote.name  %></h2>
+				<h4 class="marg-bot-top-0"><%= @quote.location %> </h4>
+			</div>
+
+		</div>
+	</div>
+	<div class="border-top">
+		<div class="tab-container">
+			<ul class= "new-nav--tabs">
+				<% if @quote.user_id == current_user.id %>
+					<li class="new-tab-unselect"><%= link_to "Bids", quote_path(@quote) %>  </li>
+				<% else %>
+					<li class="new-tab-unselect"><%= link_to "Quotes Available", quotes_path %>  </li>
+					<li class="new-tab-unselect"><%= link_to "Bids Placed", bids_path %>  </li>
+				<% end %>
+				<li class="new-tab"> Bid Overview  </li>
+
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="container-fluid grey-quote-block">
+	<div class="col-sm col-sm-8 px3 bg-white">
+		<div class="col-xs-12">
+			<h4>Discuss and Finalize Your Catering Details Below</h4>
+			<% if user_signed_in? %>
+            	<%= render :partial => "comments/form" %>
+            <% else %> 
+            	<%= link_to "Sign Up to Comment", new_user_registration_path %>  
+            <% end %>
+            <%= render :partial => "comments/comments" %>
+		</div>
+	</div>
+	<div class="col-sm col-sm-4 px3">
+		<div class="bg-white bid-shadow">
+			<div class="bid-header">
+				<h2>Bidder Overview</h2>
+				<h4><%= @bid.name %></h4>
+				<h4>Amount Bid: $<%= @bid.amount %></h4>
+			</div>
+			<div class="border-top bid-header" style="padding-bottom: 10px;">
+				<h4>Type: <%= @quote.field %></h4>
+				<p><%= @bid.description %></p>
+			</div>
+
+		</div>
+	</div>
+</div>
