@@ -3,6 +3,7 @@ require 'nokogiri'
 require 'open-uri'
 require 'csv'
 require 'mechanize'
+include Magick
 
 namespace :export do
     desc "Will out put CSV's for Subscribers"
@@ -51,6 +52,27 @@ namespace :export do
                         next
                     end
                 end
+        end
+    end
+
+    task :pictures => :environment do
+        agent = Mechanize.new
+        profiles = Profile.all
+
+        profiles.each do |profile|
+            begin
+                url = profile.scrape_url
+                html = agent.get(url)
+                pic = agent.get(html.parser.at('.imagecache-member_profile_photo')['src']).save
+                sourceImage = Image.read(pic)
+                
+                profile.avatar = sourceImage
+                profile.save
+            rescue => e
+                puts e 
+                puts pic
+                next
+            end
         end
     end
 end

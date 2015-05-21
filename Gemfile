@@ -31,6 +31,8 @@ gem 'aws-sdk'
 
 gem 'devise'
 
+
+# SEO Related
 gem 'friendly_id'
 gem 'mechanize'
 gem 'sitemap_generator'
