@@ -53,10 +53,20 @@
       
       </div>
   </div>
- <div style="margin-top: 25px; paddint-top: 5px;">
-    <div class="publications">
-      <span>Our Lawyers are Here to Give You The Best Legal Advice During Difficult and Emotional Negotiations </span>
+ <div class="publications row" style="margin-top: 25px; padding-top: 5px;">
+    
+    <span>Our Lawyers are Here to Give You The Best Divorce Advice During Difficult and Emotional Negotiations Throughout The US </span>
+    <div style="text-align=center; margin-left: 10px; padding-top: 20px">
+      <% @states.each_slice(5) do |ten_state| %>
+        <div class="col-md-1">
+        <% ten_state.each do |state| %>
+          <p><%= link_to state.name, state_show_path(state.slug) %></p>
+        <% end %>
+        </div>
+      <% end %>
+  
     </div>
+
   </div>
 
     

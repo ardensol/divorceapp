@@ -32,6 +32,12 @@ SitemapGenerator::Sitemap.create do
   SeoPage.friendly.find_each do |page|
       add seo_show_path(page.state, page.city, page), :lastmod => page.updated_at
   end
+
+  State.each do |state|
+    add state_show_path(state.name), :lastmod => state.updated_at
+  end
+
+  
   #
   #   Article.find_each do |article|
   #     add article_path(article), :lastmod => article.updated_at

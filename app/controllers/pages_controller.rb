@@ -8,6 +8,9 @@ class PagesController < ApplicationController
 				redirect_to '/quote'
 			end
 		end
+		
+		@states = State.all
+
 	end
 
 end

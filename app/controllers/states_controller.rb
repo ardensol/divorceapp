@@ -11,7 +11,7 @@ class StatesController < ApplicationController
   # GET /seo_pages/1
   # GET /seo_pages/1.json
   def show
-    @cities = SeoPage.where(state: params[:name].capitalize)
+    @cities = SeoPage.where(state: @state.name.capitalize)
     @title = "Divorce Statistics for the State of #{@state.name}"
   end
 
@@ -44,7 +44,7 @@ class StatesController < ApplicationController
   # PATCH/PUT /seo_pages/1.json
   def update
     respond_to do |format|
-      if @s_tate.update(state_params)
+      if @state.update(state_params)
         format.html { redirect_to @state, notice: 'State was successfully updated.' }
         format.json { render :show, status: :ok, location: @state }
       else
@@ -69,11 +69,11 @@ class StatesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_state
-      @state = State.find_by_name(params[:name].capitalize)
+      @state = State.friendly.find(params[:slug])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def state_params
-      params.require(:state).permit(:name, :divorce_cost, :divorce_rate, :total_divorce, :distribution_type, :divorce_law_description)
+      params.require(:state).permit(:name, :divorce_cost, :divorce_rate, :total_divorce, :distribution_type, :divorce_law_description, :slug)
     end
 end

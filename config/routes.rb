@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   resources :states
   resources :seo_pages
 
-  get 'divorce/:name', to: 'states#show', as: 'state_show' 
+  get 'divorce/:slug', to: 'states#show', as: 'state_show' 
 
   get ':state/:city/:id', to: 'seo_pages#show', as: 'seo_show'
 
