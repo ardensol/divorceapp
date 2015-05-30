@@ -1,12 +1,31 @@
-<div class = "container-fluid">
-  <h1><%= @state.name %></h1>
-
-
-  <p> <%= @state.divorce_law_description.html_safe %><p>
-
-  <% if @cities != [] %>
-    <% @cities.each do |c| %>
-      <%= link_to "#{c.city}, #{c.state}", seo_show_path(c.state, c.city, c.slug) %>
-    <% end %>
-  <% end %>
+<div class="hero-bg-state-default">
+	<div class = "container-fluid">
+	  <h2 class="state-white"><%= @state.name %></h2>
+	</div>
 </div>
+
+<div class="container-fluid">
+	<center class="state-title"><h1> Divorce Statistics for the State of <%= "#{@state.name}" %></h1></center>
+
+	<div class="row">
+		<div class="col-sm col-sm-8">
+			<p> <%= @state.divorce_law_description.html_safe %><p>
+		</div>
+		<div class="col-sm col-sm-4">
+			<p><%= @state.divorce_cost%></p>
+		</div>
+	</div>
+
+	<% if @cities != [] %>
+		<center class="state-title">Cities</center>
+		<% @cities.each_slice(5) do |five_city| %>
+			<div class="col-md-2">
+			<% five_city.each do |c| %>
+			  <%= link_to "#{c.city}, #{c.state}", seo_show_path(c.state, c.city, c.slug) %><br />
+			<% end %>
+			</div>
+		<% end %>
+
+	<% end %>
+
+</div> 

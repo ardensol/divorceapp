@@ -63,7 +63,6 @@ li {
 .hero-bg-2 {
   background: url('/images/divorce_lawyers.png') no-repeat scroll left top / cover transparent;
   height: 550px;
-
 }
 
 .signup_button {
@@ -601,7 +600,21 @@ li {
   }
 }
 
+/* The State Page*/
 
+.state-white {
+  color: white;
+}
+
+.state-title {
+  font-size: 35px;
+  padding: 10px;
+}
+
+.hero-bg-state-default {
+  background: url('/images/divorce_lawyers.png') no-repeat scroll left top / cover transparent;
+  height: 300px;
+}
 
 /* App Specific Styling */
 /* City Backgrounds */
