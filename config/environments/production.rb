@@ -84,4 +84,16 @@ Rails.application.configure do
     :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
   }
 }
+
+config.action_mailer.raise_delivery_errors = true
+config.action_mailer.delivery_method = :smtp
+
+config.action_mailer.smtp_settings = {
+     :authentication => :plain,
+     :address => "smtp.mailgun.org",
+     :port => 587,
+     :domain => "app2967ca1f10e64765a84b50f517446dc7.mailgun.org",
+     :user_name => "postmaster@app2967ca1f10e64765a84b50f517446dc7.mailgun.org",
+     :password => "6cd5690aea8964fc2ea9c2914fdbefdb"
+    }
 end
