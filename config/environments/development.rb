@@ -46,15 +46,15 @@ Rails.application.configure do
 }
 
 config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :smtp
+config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
        :authentication => :plain,
        :address => "smtp.mailgun.org",
        :port => 587,
-       :domain => "sandbox0da6461520154ea0987ff0b1aedd8924.mailgun.org",
-       :user_name => "postmaster@sandbox0da6461520154ea0987ff0b1aedd8924.mailgun.org",
-       :password => "13f4065f4df51e61e198f72a7632eea9"
+       :domain => "app2967ca1f10e64765a84b50f517446dc7.mailgun.org",
+       :user_name => "postmaster@app2967ca1f10e64765a84b50f517446dc7.mailgun.org",
+       :password => "6cd5690aea8964fc2ea9c2914fdbefdb"
       }
 
   # Raises error for missing translations
