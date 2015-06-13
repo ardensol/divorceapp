@@ -12,6 +12,8 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  resources :consultations
+
   match "quote", to: "quotes#quote", via: 'get'
 
   get "comments/index"
@@ -27,6 +29,10 @@ Rails.application.routes.draw do
   get ':state/:city/:id', to: 'seo_pages#show', as: 'seo_show'
 
   root to: 'pages#home'
+
+  scope '/lawyers' do
+    get 'websites', to: 'tours#websites'
+  end
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

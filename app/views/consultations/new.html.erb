@@ -1,0 +1,24 @@
+<div id="what-we-do">
+	<div class="row">
+		<div class="col-md-4">
+			<h1>Free Consultation</h1>
+			<p>Let's start with a conversation about your business. Get in touch here, and we'll schedule a time to talk.</p>
+		</div>
+		<div class="col-md-8">
+			<%= form_for @consultation do |f| %>
+				<h3 class="quote_label">Enter Your Email</h3>
+				<%= f.text_field(:email, class: "quote_input") %><br/>
+			
+				<h3 class="quote_label">Name</h3>
+				<%= f.text_field(:name, class: "quote_input") %><br/>
+
+				<h3 class="quote_label">Tell Us About Your Business.  Where are you located?  What are your goals?</h3>
+				<%= f.text_area(:description, class: "quote_textarea") %><br/>
+
+				<%= f.submit "Tell me More About Divorce Fox", class: "consultation_button" %>
+			<% end %>
+		</div>
+
+
+	</div>
+</div>

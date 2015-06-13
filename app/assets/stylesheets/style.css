@@ -7,6 +7,14 @@ a:hover {
   background-color: none;
 }
 
+/* ALL */
+
+.no-margin {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+
 
 /* Nav Bar */
 
@@ -615,6 +623,152 @@ li {
   background: url('/images/divorce_lawyers.png') no-repeat scroll left top / cover transparent;
   height: 300px;
 }
+
+/* Websites Page */
+
+#websites_header {
+  background: url('/images/divorce_lawyer_websites.jpg');
+  background-repeat: no-repeat;
+  height: 403px;
+  background-size: cover !important;
+}
+
+.extra {
+  padding-top: 95px;
+  padding-bottom: 150px;
+}
+
+#websites_header .columns {
+  text-align: center;
+  position: relative;
+}
+
+#websites_header h2 {
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 35px;
+  line-height: 40px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#websites_header p {
+  color: white;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.button-down {
+  margin: 0px 20px;
+  padding: 12px 24px;
+  display: inline-block;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  font-weight: bold;
+  line-height: 22px;
+  width: auto;
+  letter-spacing: 2px;
+  color: white;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  border: 1px solid #fff;
+
+}
+
+.subtitle {
+  letter-spacing: 1px;
+}
+
+.website-copy {
+  color: #668582;
+  font-size: 17px;
+  padding-top: 10px;
+}
+
+#what-we-do {
+  background: #F1F5F8;
+  padding: 80px 5% 50px;
+}
+
+.section-title {
+  margin-bottom: 80px;
+  width: 75%;
+}
+
+.section-title h2 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  margin-bottom: 0px;
+}
+
+.section-title h3 {
+  padding: 10px 0 0 0;
+  font-family: "clarendon-text-pro", georgia;
+  font-weight: normal; 
+  color: #668582;
+  font-size: 3rem;
+}
+
+#what-we-do h4 {
+  font-size: 2rem; 
+  font-family: "clarendon-text-pro", georgia;
+  color: #001932;
+  line-height: 1.3rem;
+  padding-top: 10px;
+}
+
+#what-we-do p {
+  font-size: 1.5rem
+}
+
+#professional-support {
+  background: #FFF;
+  padding: 80px 5% 50px;
+}
+
+.ready {
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+@media (max-width: 482px) {
+  .section-subtitle {
+    margin-left: 30px;
+  }
+  .extra {
+    padding-top: 50px;
+  }
+  
+}
+
+@media (min-width: 483px) {
+  .section-subtitle {
+    margin-right: 140px;
+    margin-left: 140px;
+  }
+
+}
+
+/* Consultation New */
+
+.consultation_button {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  padding: 20px 8px 21px;
+  background: #27A877;
+  color: white;
+  font-weight: bold; 
+
+}
+
+
 
 /* App Specific Styling */
 /* City Backgrounds */
