@@ -8,6 +8,8 @@ class ConsultationsController < ApplicationController
 
 	    respond_to do |format|
 	      if @consultation.save
+	      	consultation = @consultation
+	      	ConsultationMailer.new_message(consultation).deliver
 	        format.html { redirect_to '/lawyers/websites', notice: 'Your Consultation Request Has Been Sent.' }
 	        format.json { render :show, status: :created, location: @consultation }
 	      else
