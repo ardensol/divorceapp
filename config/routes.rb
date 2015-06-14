@@ -28,7 +28,7 @@ Rails.application.routes.draw do
 
   get ':state/:city/:id', to: 'seo_pages#show', as: 'seo_show'
 
-  root to: 'pages#home'
+  root to: 'tours#websites'
 
   scope '/lawyers' do
     get 'websites', to: 'tours#websites'
