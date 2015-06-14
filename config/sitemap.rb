@@ -29,11 +29,11 @@ SitemapGenerator::Sitemap.create do
   #
   # Add all articles:
 
-  SeoPage.friendly.find_each do |page|
+  SeoPage.find_each do |page|
       add seo_show_path(page.state, page.city, page), :lastmod => page.updated_at
   end
 
-  State.each do |state|
+  State.find_each do |state|
     add state_show_path(state.name), :lastmod => state.updated_at
   end
 
