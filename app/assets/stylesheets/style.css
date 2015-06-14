@@ -99,7 +99,10 @@ li {
   text-align: center;
   }
 
-
+.state_text {
+  letter-spacing: 1px;
+  color: black;
+}
 
 .headline {
   padding: 100px 80px 0px;

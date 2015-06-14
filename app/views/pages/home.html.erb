@@ -56,11 +56,11 @@
  <div class="publications row" style="margin-top: 25px; padding-top: 5px;">
     
     <span>Our Lawyers are Here to Give You The Best Divorce Advice During Difficult and Emotional Negotiations Throughout The US </span>
-    <div style="text-align=center; margin-left: 10px; padding-top: 20px">
+    <div style="text-align=center; padding-left: 100px; padding-top: 20px">
       <% @states.each_slice(5) do |ten_state| %>
         <div class="col-md-1">
         <% ten_state.each do |state| %>
-          <p><%= link_to state.name, state_show_path(state.slug) %></p>
+          <p style="state_text"><%= link_to state.name, state_show_path(state.slug), class: "state_text" %></p>
         <% end %>
         </div>
       <% end %>
