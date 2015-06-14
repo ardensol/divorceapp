@@ -33,7 +33,9 @@ Rails.application.routes.draw do
   scope '/lawyers' do
     get 'websites', to: 'tours#websites'
   end
-  
+
+  match "home", to: 'pages#home' , via: 'get'
+    
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
